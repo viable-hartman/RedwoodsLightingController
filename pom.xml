@@ -16,6 +16,19 @@
         <gluonfx.plugin.version>1.0.19</gluonfx.plugin.version>
         <javafx.plugin.version>0.0.8</javafx.plugin.version>
         <mainClassName>edu.redwoods.cis18.LightingControl</mainClassName>
+        <!-- App releaseConfiguration properties -->
+        <app.identifier>${mainClassName}</app.identifier>
+        <app.description>A cross device display lighting control app!</app.description>
+        <package.type/>
+        <mac.app.store/>
+        <mac.signing.user.name/>
+        <bundle.version/>
+        <bundle.short.version/>
+        <version.code/>
+        <provided.keystore.path/>
+        <provided.keystore.password/>
+        <provided.key.alias/>
+        <provided.key.alias.password/>
     </properties>
 
     <dependencies>
@@ -111,6 +124,22 @@
                         <list>edu.redwoods.cis18.views.ConfigurationPresenter</list>
                     </reflectionList>
                     <mainClass>${mainClassName}</mainClass>
+                    <appIdentifier>${app.identifier}</appIdentifier>
+                    <releaseConfiguration>
+                        <vendor>Trevor Hartman</vendor>
+                        <description>${app.description}</description>
+                        <packageType>${package.type}</packageType>
+                        <!-- for macOS/iOS -->
+                        <macAppStore>${mac.app.store}</macAppStore>
+                        <bundleShortVersion>${bundle.short.version}</bundleShortVersion>
+                        <bundleVersion>${bundle.version}</bundleVersion>
+                        <!-- for Android -->
+                        <versionCode>${version.code}</versionCode>
+                        <providedKeyStorePath>${provided.keystore.path}</providedKeyStorePath>
+                        <providedKeyStorePassword>${provided.keystore.password}</providedKeyStorePassword>
+                        <providedKeyAlias>${provided.key.alias}</providedKeyAlias>
+                        <providedKeyAliasPassword>${provided.key.alias.password}</providedKeyAliasPassword>
+                    </releaseConfiguration>
                 </configuration>
             </plugin>
         </plugins>
@@ -121,12 +150,20 @@
             <id>ios</id>
             <properties>
                 <gluonfx.target>ios</gluonfx.target>
+                <bundle.version>${env.GITHUB_RUN_NUMBER}</bundle.version>
+                <bundle.short.version>1.0</bundle.short.version>
             </properties>
         </profile>
         <profile>
             <id>android</id>
             <properties>
                 <gluonfx.target>android</gluonfx.target>
+                <app.identifier>edu.redwoods.cis18.LightingControl</app.identifier>
+                <version.code>${env.GITHUB_RUN_NUMBER}</version.code>
+                <provided.keystore.path>${env.GLUON_ANDROID_KEYSTOREPATH}</provided.keystore.path>
+                <provided.keystore.password>${env.GLUON_ANDROID_KEYSTORE_PASSWORD}</provided.keystore.password>
+                <provided.key.alias>${env.GLUON_ANDROID_KEYALIAS}</provided.key.alias>
+                <provided.key.alias.password>${env.GLUON_ANDROID_KEYALIAS_PASSWORD}</provided.key.alias.password>
             </properties>
         </profile>
     </profiles>
