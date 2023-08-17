@@ -1,0 +1,9 @@
+name: Epic
+description: Group User-Stories under a common issue
+title: "[EPIC] <title>"
+labels: ["epic"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Link all User-Stories for this Epic by using the "#" syntax and the issue number below:
