@@ -1,7 +1,7 @@
 name: User Story
 description: Group User-Stories under a common issue
-title: "[EPIC] <title>"
-labels: ["epic"]
+title: "[User Story] <title>"
+labels: ["user-story"]
 body:
   - type: input
     id: persona
