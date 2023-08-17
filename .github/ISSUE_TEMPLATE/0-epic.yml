@@ -3,7 +3,25 @@ description: Group User-Stories under a common issue
 title: "[EPIC] <title>"
 labels: ["epic"]
 body:
+  - type: textarea
+    id: personas
+    attributes:
+      label: User roles or personas?
+      description: List all personas related user stories will be created for.
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
   - type: markdown
     attributes:
       value: |
-        Link all User-Stories for this Epic by using the "#" syntax and the issue number below:
+        # Ordered steps
+        ## Break down the epic/process and link a user-story for each step
+        * Use the *#issue-number* syntax for clickable links:
+  - type: input
+    id: time
+    attributes:
+      label: Time Estimate
+      description: What is the initial time estimate for this Epic?
+    validations:
+      required: false
