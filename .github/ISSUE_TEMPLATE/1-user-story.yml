@@ -28,6 +28,16 @@ body:
     validations:
       required: true
   - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
+      description: "List of task-issues necessary to complete part of this user story."
+      placeholder: |
+        Create a "Task Issue" then use the text-area's create a task list linking each task to this user-story with the # syntax."
+        e.g. - [ ] #5555"
+    validations:
+      required: true
+  - type: textarea
     id: acceptance-criteria
     attributes:
       label: Acceptance Criteria
