@@ -8,16 +8,17 @@ body:
     attributes:
       label: User roles or personas?
       description: List all personas related user stories will be created for.
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      placeholder: "List roles or personas here!"
     validations:
       required: true
-  - type: markdown
+  - type: textarea
+    id: user-stories
     attributes:
-      value: |
-        # Ordered steps
-        ## Break down the epic/process and link a user-story for each step
-        * Use the *#issue-number* syntax for clickable links:
+      label: User Stories for Epic
+      description: "Break down the epic/process and link a user-story for each step. Create User-Story Issue then use create a task list linking each user story with the # syntax."
+      placeholder: "- [ ] #1234"
+    validations:
+      required: true
   - type: input
     id: time
     attributes:
