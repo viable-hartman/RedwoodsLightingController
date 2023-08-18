@@ -1,5 +1,5 @@
 name: User Story
-description: Group User-Stories under a common issue
+description: Independent, negotiable, Valuable, Estimable, Small and Testable description of work that needs to be done from the perspective of the user.
 title: "[User Story] <title>"
 labels: ["user-story"]
 body:
@@ -44,9 +44,9 @@ body:
       description: Metric of Story Progress
       placeholder: |
         * List of requirements at user or system level
-        * May also include system flow diagrams or sequence diagrams here.
+        * May also include screenshots, system flow diagrams, or sequence diagrams here.
         * Must be specific to the User Story
-        * Must be met to ensure store is complete.
+        * Must be met to ensure story is complete.
     validations:
       required: false
   - type: textarea
