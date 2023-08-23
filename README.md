@@ -1,4 +1,4 @@
 # Redwoods Lighting Controller
 
-* This project is TBA
+* This project is TBA.
 
