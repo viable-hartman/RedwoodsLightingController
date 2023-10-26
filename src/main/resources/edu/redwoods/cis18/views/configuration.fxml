@@ -2,15 +2,17 @@
 
 <?import com.gluonhq.charm.glisten.mvc.View?>
 <?import javafx.scene.control.Label?>
+<?import com.gluonhq.charm.glisten.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<View fx:id="configuration" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.redwoods.cis18.views.ConfigurationPresenter">
+<View fx:id="configuration" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.redwoods.cis18.views.ConfigurationPresenter">
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="%label.text" />
+            <Label fx:id="lblInfo" text="%label.text" />
+            <TextField fx:id="txtHostIP" promptText="Host IP" />
+            <TextField fx:id="txtHostPort" promptText="Host Port" />
          </children>
       </VBox>
    </center>
